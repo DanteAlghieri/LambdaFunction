@@ -6,6 +6,11 @@
 #include <algorithm>
 using namespace std;
 
+//#include "Basics.cpp"
+
+int maxim(vector<int> v);
+vector<int> declare_and_insert_elements_vector(int i);
+
 void print_element(int value)
 {
     cout << value << " ";
@@ -33,21 +38,34 @@ void print_vector_using_for_each_algorithm(vector<int> v)
 
 void print_vector_using_lambda(vector<int> v)
 {
-    for_each(begin(v), end(v), [](int value) { cout << value << " "; });
+    for_each(begin(v), end(v), [](int value)->int { cout << value << " "; return 0; });
 
     cout << "\n";
+
+
 }
+
 
 
 int main()
 {
-    vector<int> v{ 4, 1, 3, 5, 2, 3, 1, 7, 8 };
+    vector<int> v{ 4, 1, 3, 5, 2, 3, 1, 7, 8, 7, 12, 88, 2, 3, 5 };
+
+    int no_of_elems_in_vectorul = 10;
 
     print_vector_using_simple_iterator(v);
 
     print_vector_using_for_each_algorithm(v);
 
     print_vector_using_lambda(v);
+
+    maxim(v);
+
+    vector<int> vectorul = declare_and_insert_elements_vector(no_of_elems_in_vectorul);
+
+    print_vector_using_simple_iterator(vectorul);
+
+    return 0;
 
 }
 
