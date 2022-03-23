@@ -6,7 +6,6 @@
 #include <algorithm>
 using namespace std;
 
-//#include "Basics.cpp"
 
 int maxim(vector<int> v);
 vector<int> declare_and_insert_elements_vector(int i);
